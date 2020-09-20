@@ -73,21 +73,22 @@
 - (B) Sachinformationen aus Fachliteratur (Literaturgeschichten); 
 - (C) Texteigenschaften aus Primärtexten (Volltexte der Romane) 
 - Ziel: Informationen extrahieren, als LOD modellieren und zusammenführen
+- Eine Art Wikidata für die Literaturgeschichte
 
 
 ---
 ### Was sind (literaturhistorisch) relevante Informationen?
 
-* (A) Nachweissysteme <!-- .element: class="fragment" data-fragment-index="1" -->
+* Nachweissysteme <!-- .element: class="fragment" data-fragment-index="1" -->
     * Metadaten: Autoren, Werke, Verlage, etc.
     * Keywords in der *Bibliographie...*: Setting, Themen, Protagonisten
 <br/><br/>    
-* (B) Fachliteratur <!-- .element: class="fragment" data-fragment-index="2" -->
+* Fachliteratur <!-- .element: class="fragment" data-fragment-index="2" -->
     * Handlung, Inhalte, Themen
     * Wertungen von Autor:innen und Werken
     * Beziehungen zwischen Autor:innen und Werken
 <br/><br/>    
-* (C) Primärtexte <!-- .element: class="fragment" data-fragment-index="3" -->
+* Primärtexte <!-- .element: class="fragment" data-fragment-index="3" -->
     * Handlungsorte 
     * Figurennamen
     * Topics 
@@ -119,7 +120,8 @@
 <a href="img/bgrf-Diderot-RDF.png"><img height="500" src="img/bgrf-Diderot-RDF.png"></img></a>
 
 ::
-- Eintrag hier nun in modellierter Form
+- Eintrag hier nun in modellierter Form (Andreas Lüschow)
+- Alles natürlich automatisch: Machine Learning 
 - Explizite Zuordnung jeder Information zu einem Konzept in einer Ontologie
 - Hier im RDF-Format
 - Bibliographie ist Referenzpunkt für das Projekt
@@ -158,7 +160,6 @@
   * Objekt: Topic "philosophy"
 * LOD-Statement <!-- .element: class="fragment" data-fragment-index="3" -->
   * Candide MAIN_SUBJECT 'philosophy'
-  * {Candide MAIN_SUBJECT 'philosophy'} RANK 2
 
 :: 
 - Ende: Solche Aussagen gehen dann in den LOD-Bestand ein; Wissensnetzwerk
@@ -179,6 +180,7 @@
 
 ::
 - = Einfache bibliographische Metadaten
+- Identifier: kommen aus Wikidata; lasse ich im Folgenden weg
 
 ---
 #### Aussagen (2) 
@@ -189,13 +191,16 @@
 * <!-- .element: class="fragment" data-fragment-index="4" --> Candide MAIN_SUBJECT "philosophie"
 
 ::
-- Modellierungsfragen: RECEPTION_INTENSITY oder REPRINT_COUNT?
+- letzte Aussage: kommt aus der Topic Modeling-Analyse
+- Modellierungsfragen: 
+- -- RECEPTION_INTENSITY oder REPRINT_COUNT?
+- -- MAIN_SUBJECT, Topic: halten wir den Rang oder die Wahrscheinlichkeit fest?
 
 ---
 #### Besondere Aussagetypen
-* Source:<br/>{Voltaire AUTHOR_OF Candide} SOURCE Köhler_1984  <!-- .element: class="fragment" data-fragment-index="1" -->
-* Qualifier:<br/>{Candide LEGAL_STATUS censored} TEMPORAL_SCOPE 1759-1765  <!-- .element: class="fragment" data-fragment-index="2" -->
-* Implicit:<br/>Köhler_1984 MAIN_SUBJECT Voltaire; Candide; Geneva  <!-- .element: class="fragment" data-fragment-index="3" -->
+* {Voltaire AUTHOR_OF Candide} SOURCE Köhler_1984  <!-- .element: class="fragment" data-fragment-index="1" -->
+* {Candide LEGAL_STATUS censored} TEMPORAL_SCOPE 1759-1765  <!-- .element: class="fragment" data-fragment-index="2" -->
+* Köhler_1984 MAIN_SUBJECT Voltaire; Candide; Geneva  <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ::
 - [Source, Qualifier, Implicit: hier noch übersetzen?]
@@ -208,8 +213,8 @@
 <a href="img/network-of-information.png"><img height="500" src="img/network-of-information.png"></img></a>
 
 ::
-- [WIP: Überschrift anpassen]
-- [WIP nach oben gezogen (?): 2 Ausschnitte/Varianten des Graphen? -> MH: Update; das Infonetzwerk könnte ggf. eigener Teil sein oder aber Teil zwischen jetzigem 3 und 4?]
+- Kleiner Ausschnitt
+- Abgleich zwischen Bibliographie und Topic Modeling: Themen, Handlungsorte
 
 
 --
@@ -234,6 +239,7 @@
     * stark erweiterter Abdeckung (Autoren, Werke)
     * stark erhöhter Aussagendichte
     * systematischer Ontologie von Aussagentypen
+    * vielfältigen Anwendungsszenarien für die Literaturgeschichte
 
 
 ---
@@ -245,12 +251,17 @@
   * Explizite, semantisch kodierte Textstruktur <!-- .element: class="fragment" data-fragment-index="4" -->
   * Auszeichnung un Identifikation von Entitäten (Normdaten) <!-- .element: class="fragment" data-fragment-index="5" -->
   * Kernaussagen als LOD-Statements <!-- .element: class="fragment" data-fragment-index="6" -->
-  *Alles in offenen Standardformaten <!-- .element: class="fragment" data-fragment-index="7" -->
+  * Alles in offenen Standardformaten <!-- .element: class="fragment" data-fragment-index="7" -->
 
 ::
+- Im Projekt alles extrem aufwändig
+- Überführung von unstrukturiertem Text in maschinenlesbare Daten
+- Motivation für Änderungen im Publikationswesen
 - Im Grunde sind das alles Anforderungen an das zukünftige, wissenschaftliche Publikationssystem
 - Dafür brauchen wir auch wissenschaftsadäquate Software, insbesondere Schreibsoftware
-- Die dabei unterstützt, Entitäten auszuzeichnen
+- Software, die bspw. dabei unterstützt, Entitäten auszuzeichnen
+- Aber auch ein Verständnis dafür bei den Kolleg:innen, dass das sinnvoll ist
+- Wir hoffen, heute hierzu etwas beigetragen zu haben
 
 
 
